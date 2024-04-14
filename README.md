@@ -4,6 +4,7 @@ Run Away Fashion is a mock e-commerce where you can pretend to shop for solution
 ![logo.png](logo.png)
 
 ## Running Locally
+
 ### Step 1: Running the Backend:
 - From the root, paste the following commands into your terminal:
     ```bash
