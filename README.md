@@ -1,5 +1,6 @@
 # Run Away Fashion
-Run Away Fashion is a mock e-commerce where you can pretend to shop for solutions to your problems that aren't really products - like self-esteem or a new skill.
+Run Away Fashion is a mock e-commerce where you can pretend to shop for quick solutions to your 
+problems - like self-esteem or a new skill.
 
 ![logo.png](logo.png)
 
@@ -13,7 +14,7 @@ Run Away Fashion is a mock e-commerce where you can pretend to shop for solution
     ```bash
     ./mvnw spring-boot:run
     ```
-- Access this API at `http://localhost:8080/product/01`
+- Access this API at `http://localhost:8080/browse/` or `http://localhost:8080/browse/product/01`
 
 ### Step 2: Running the Frontend:
 - Make sure you're using node version `21.7.3` 
@@ -48,10 +49,14 @@ Run Away Fashion is a mock e-commerce where you can pretend to shop for solution
 ### Future plans
 
 - Deploy to AWS
+- CI/CD
+- GitHub Actions
 
 #### Backend
  - Create database for products
- - Create users/accounts - RDBMS - PostgreSQL?
+ - Create RDBMS - Postgres/AWS 
+   - users/accounts
+   - products/tags
  - Endpoints:
    - runaway-fashion.co.uk/ (HOMEPAGE)
    - runaway-fashion.co.uk/browse/{section} (PLP - section would be an optional filter)

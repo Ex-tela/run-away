@@ -18,7 +18,7 @@ public class ProductControllerTests {
 
     @Test
     void getProduct() throws Exception {
-        mockMvc.perform(get("/product/01").accept(MediaType.APPLICATION_JSON))
+        mockMvc.perform(get("/g/product/01").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().json("""
                                                 {"name":"self-esteem",
@@ -27,5 +27,24 @@ public class ProductControllerTests {
                                                 "imageUrl": "https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png?w=1024",
                                                 "productDescription": "Tired of feeling like you're not good for anything? With our newly created Self-Esteem® you can just forget about your insecurities and get through what you need to without the constant self-pounding!"}
                         """));
+    }
+
+    @Test
+    void getProductList() throws Exception {
+        mockMvc.perform(get("/browse/").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().json("""
+                                                [{"name":"self-esteem",
+                                                "productId": "01",
+                                                "price":4500,
+                                                "imageUrl": "https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png?w=1024",
+                                                "productDescription": "Tired of feeling like you're not good for anything? With our newly created Self-Esteem® you can just forget about your insecurities and get through what you need to without the constant self-pounding!"
+                                                },
+                                                {"name":"self-esteem",
+                                                "productId": "01",
+                                                "price":4500,
+                                                "imageUrl": "https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png?w=1024",
+                                                "productDescription": "Tired of feeling like you're not good for anything? With our newly created Self-Esteem® you can just forget about your insecurities and get through what you need to without the constant self-pounding!"}]
+                                                """));
     }
 }
