@@ -12,7 +12,6 @@ const config: Config = {
     extend: {},
   },
   plugins: [flowbite],
-  // darkMode: 'selector',
-  // darkMode: ['variant', '&:not(.light *)']
+  darkMode: 'media',
 };
 export default config;
