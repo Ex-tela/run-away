@@ -53,15 +53,16 @@ problems - like self-esteem or a new skill.
 - GitHub Actions
 
 #### Backend
- - Create database for products
- - Create RDBMS - Postgres/AWS 
-   - users/accounts
-   - products/tags
+ - Create RDBMS - Postgres/AWS (see plan below)
  - Endpoints:
    - runaway-fashion.co.uk/ (HOMEPAGE)
    - runaway-fashion.co.uk/browse/{section} (PLP - section would be an optional filter)
    - runaway-fashion.co.uk/product/{productId} (PDP)
  - Automated tests
+
+DB plan:
+
+![img.png](img.png)
 
 #### Frontend
 - Implement layout for website:

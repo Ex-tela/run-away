@@ -24,7 +24,7 @@ public class ProductController {
         return product;
     }
 
-    @GetMapping("/")
+    @GetMapping("")
     public List<Product> getProductList() {
         return List.of(product, product);
     }
