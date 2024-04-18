@@ -32,7 +32,7 @@ export default function DarkModeToggleLayout({children,}: Readonly<{
       </head>
 
       <body className={bodyFont.className}>
-      <Navbar className="text-stone-800 dark:text-stone-300 bg-stone-200 dark:bg-stone-800">
+      <Navbar className="text-stone-800 dark:text-stone-300 bg-stone-200 dark:bg-stone-800 fixed w-full">
         <NavbarBrand as={Link} className="hover:scale-110" href="/">
           <TbRun className="text-4xl mr-1"/>
           <div className={titleFont.className}>
@@ -76,7 +76,7 @@ export default function DarkModeToggleLayout({children,}: Readonly<{
       </Navbar>
 
       <main className="w-full flex justify-center">
-        <div className="max-w-5xl m-3 text-stone-800 dark:text-stone-400">
+        <div className="max-w-5xl m-3 text-stone-800 dark:text-stone-400 mt-28 md:mt-20">
           <div className={bodyFont.className}>
             {children}
           </div>
